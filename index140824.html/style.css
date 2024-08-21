@@ -1,0 +1,35 @@
+#container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+    gap: 1rem;
+    grid-template-areas:
+    "cabeza cabeza lado"
+    "ptincipal principal lado"
+    "pie pie pie"
+    ;
+}
+ header {
+    grid-area: cabeza;
+    background-color: blue;
+ }
+ main {
+    grid-area: principio;
+    background-color: blueviolet;
+ }
+ aside {
+    grid-area: lado;
+    background-color: rgb(226, 43, 153);
+ }
+ footer { 
+    grid-area: pie;
+    background-color: hsl(309, 58%, 54%);
+}
+
+/*Diseño responsivo*/
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: black;
+    }
+}
